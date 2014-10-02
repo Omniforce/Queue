@@ -2,7 +2,7 @@
 public class DoubleLinkedList {
 	
 	private Node first;
-	private Node last;
+	private Node last; // Allows for O(1) insertion
 	private int size;
 	private int maxSize;
 	
@@ -10,6 +10,7 @@ public class DoubleLinkedList {
 		this.maxSize = maxSize;
 	}
 	
+	// Inserts an element into the end of the list unless already full
 	public void insertElem(Integer elem) throws QueueFullException {
 		if(this.maxSize <= this.size) {
 			throw new QueueFullException();
@@ -23,6 +24,7 @@ public class DoubleLinkedList {
 		this.size++;
 	}
 	
+	// Removes and return an element from the front of the list
 	public int removeElem() throws QueueEmptyException {
         if(this.last == null){
         	throw new QueueEmptyException();

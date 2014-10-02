@@ -1,7 +1,7 @@
 
 public class Node {
 
-	private Node prev;
+	private Node prev; // Used to for O(1) insertion
 	private Node next;
 	private int value;
 	
